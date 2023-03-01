@@ -6,8 +6,8 @@
 // to see debug messages set define #debugMode to 1
 
 
- #define UsageExample 1
- #define DebugMode 1
+ // #define UsageExample 1
+ // #define DebugMode 1
 
 #ifndef DebugMode
 	#define DebugMode 0
@@ -21,9 +21,6 @@
 #ifndef DisplayStackFunktion
 	#define DisplayStackFunktion 0
 #endif // !DisplayStackFunktion
-
-
-
 
 /*
 * the following example of a stack implementation is based on a linked list. Where every node stores the adres of the next node.
@@ -121,13 +118,16 @@ void display() {
 		}
 		else
 		{
-			printf("The stack is \n");
+			printf("The stack is \n\n");
+			printf("+--------+\n");
 		while (nextTopNode != NULL)
 		{
-			printf("%d--->", nextTopNode->dataThatIsStoredInNode);
+			printf("|    %d   |\n", nextTopNode->dataThatIsStoredInNode);
+			printf("+--------+\n");
 			nextTopNode = nextTopNode->pointerToNextNode;
 		}
-		printf("NULL\n\n");
+		printf("|  NULL  |\n");
+		printf("+--------+\n\n");
 		}
 		
 
